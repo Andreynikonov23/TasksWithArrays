@@ -1,12 +1,12 @@
 package nick.pack;
 
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-      //  bigArrayAndTwoSmall();
-        streetsAndHouses();
+        //  bigArrayAndTwoSmall();
+        //streetsAndHouses();
+        twoArrays();
     }
 
     public static void bigArrayAndTwoSmall(){
@@ -62,6 +62,26 @@ public class Main {
         } else
             System.out.println("В домах с нечетными номерами проживает больше жителей.");
     }
-    public 
+    public static void twoArrays(){
+        /* 2 массива
+        1. Создать массив на 10 строк.
+        2. Создать массив на 10 чисел.
+        3. Ввести с клавиатуры 10 строк, заполнить ими массив строк.
+        4. В каждую ячейку массива чисел записать длину строки из массива строк, индекс/номер
+        ячейки которой совпадает с текущим индексом из массива чисел.
+         В ывести содержимое массива чисел на экран, каждое значение выводить с новой строки.
+        */
+        Scanner scanner = new Scanner(System.in);
+        String[] strArr = new String[10];
+        int [] intArr = new int[10];
+        for (int i = 0; i < strArr.length; i++) {
+            strArr[i] = scanner.nextLine();
+        }
+        for (int i = 0; i < strArr.length; i++) {
+            intArr[i] = strArr[i].length();
+        }
+        for (int i = 0; i < intArr.length; i++) {
+            System.out.println(intArr[i]);
+        }
+    }
 }
-
