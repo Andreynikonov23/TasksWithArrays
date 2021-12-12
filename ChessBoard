@@ -1,0 +1,32 @@
+package nick.pack;
+
+import java.util.Scanner;
+
+public class ChessBoard {
+    public static void main(String[] args) {
+        /*Давай создадим программу для генерации квадратных шахматных досок с заданной размерностью.
+         В классе Solution дан двумерный массив символов (поле array). Необходимо:
+         1.считать число с клавиатуры — это и будет размерность нашей будущей доски (длина стороны);
+         2.инициализировать массив array соответствующим значением;
+         3."закрасить" массив так, чтобы получилась шахматная доска (черные клетки — '#', белые — ' '). Начинаем заполнять массив с '#' с верхнего левого угла;
+         4.вывести массив на экран в таком виде, как в примере (каждую строку отдельно).
+         */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter size chess board: ");
+        int size = scanner.nextInt();
+        array = new char[size][size];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if ((i + j)%2 == 0) {
+                    array[i][j] = '#';
+                } else {
+                    array[i][j] = ' ';
+                }
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        }
+        
+    }
+    public static char array[][];
+}
