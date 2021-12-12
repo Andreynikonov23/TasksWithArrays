@@ -1,0 +1,21 @@
+package nick.pack;
+
+public class Main {
+    public static void main(String[] args) {
+        /*
+        Проинициализируй массив MULTIPLICATION_TABLE значением new int[10][10],
+        заполни его таблицей умножения и выведи в консоли в следующем виде:
+        1 2 3 4 … 2 4 6 8 … 3 6 9 12 … 4 8 12 16 … … Числа в строке разделены пробелом.
+        */
+        int[][] mulTab = new int[10][10];
+        for (int i = 1; i < mulTab.length; i++) {
+
+            for (int j = 1; j < mulTab.length; j++) {
+                mulTab[i][i] = i;
+                mulTab[j][j] = j*i;
+                System.out.print(mulTab[j][j] + "");
+            }
+            System.out.println("");
+
+        }
+    }
