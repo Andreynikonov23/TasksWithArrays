@@ -1,0 +1,34 @@
+package warmUp;
+
+
+import java.util.Arrays;
+
+public class Main1 {
+    public static void main(String[] args) {
+        /*
+        Создайте массив из 15 случайных целых чисел из отрезка [0;9].
+        Выведите массив на экран. Подсчитайте сколько в массиве чётных
+        элементов и выведете это количество на экран на отдельной строке.
+        */
+        int[] arr = new int[15];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] =(int)(Math.random()*((9-0)+1))+0;
+        }
+        System.out.print(Arrays.toString(arr) + " ");
+        int even = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i]%2 == 0) {
+                even +=arr[i];
+            }
+        }
+        System.out.println();
+        System.out.println(even);
+        int odd = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(!(arr[i]%2 == 0)) {
+                odd +=arr[i];
+            }
+        }
+        System.out.println(odd);
+    }
+}
