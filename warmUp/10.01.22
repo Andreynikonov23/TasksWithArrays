@@ -1,0 +1,46 @@
+package nick.pack;
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        while (true) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Введите число больше 3.");
+            int n = scanner.nextInt();
+            if (n > 3) {
+                int[] array = new int[n];
+                for (int i = 0; i < array.length; i++) {
+                    array[i] = (int) (Math.random() * ((n - 1) + 1) + 1);
+                }
+                System.out.println(Arrays.toString(array));
+
+                int count = 0;
+                for (int i = 0; i < array.length; i++) {
+                    if (array[i] % 2 == 0) {
+                        count++;
+                    }
+                }
+                System.out.println(count);
+                int cc = 0;
+                int[] evenArr = new int[count];
+                for (int i = 0; i < array.length; i++) {
+                    if(array[i]%2 == 0){
+                        evenArr[cc] = array[i];
+                        cc++;
+                    }
+                }
+                System.out.println(Arrays.toString(evenArr));
+                break;
+            } else
+                System.out.println("Число меньше 3. Попробуйте еще раз");
+            System.out.println("________________________________________________________________________");
+            System.out.println();
+            System.out.println();
+            System.out.println();
+        }
+    }
+}
+
